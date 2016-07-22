@@ -7,11 +7,20 @@
     <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
-    <div ng-app="loginApp" class="container">
+    <div ng-app="LoginApp">
+		<h3>Connexion</h3>
         <div ng-controller="controller">
-		  <input type='text' ng-model='username'>
-		  <input type='text' ng-model='password'>
-		  <input type='submit' ng-click='functionLog()' value='Log in'>
+			<table>
+				<tr>
+					<td><label>Identifiant :</label></td>
+					<td><input type='text' ng-model='username'></td>
+				</tr>
+				<tr>
+					<td><label>Mot de passe :</label></td>
+					<td><input type='password' ng-model='password'></td>
+				</tr>
+				<tr><td><input type='submit' ng-click='functionLog()' value='Se connecter'></td></tr>
+			</table>
 		</div>
     </div>
 <script src="js/jquery-1.12.3.min.js"></script>
