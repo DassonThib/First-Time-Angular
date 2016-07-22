@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular test - Home</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div ng-app="App">
+	<h2>Bienvenue</h2>
+	<div ng-controller="menuController">
+		<button ng-click="medecins()">Medecins</button>
+		<button ng-click="hopitaux()">Hôpitaux</button>
+		<button ng-click="contrats()">Contrats</button>
+		<button ng-click="planning()">Planning</button>
+	</div>
+	
+	<div id="partial"></div>
+	
+</div>
+<script src="js/jquery-1.12.3.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="application/javascript" src="js/app.js"></script>
+</body>
+</html>

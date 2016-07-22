@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
-    <div ng-app="LoginApp">
+    <div ng-app="App">
 		<h3>Connexion</h3>
         <div ng-controller="controller">
 			<table>
+			<form>
 				<tr>
 					<td><label>Identifiant :</label></td>
 					<td><input type='text' ng-model='username'></td>
@@ -20,6 +21,7 @@
 					<td><input type='password' ng-model='password'></td>
 				</tr>
 				<tr><td><input type='submit' ng-click='functionLog()' value='Se connecter'></td></tr>
+			</form>
 			</table>
 		</div>
     </div>
