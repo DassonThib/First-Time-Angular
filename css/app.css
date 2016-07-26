@@ -6,3 +6,8 @@ table {
 body {
 	background-color : #F5F5DC;
 }
+
+#partial {
+	padding-left : 30px;
+	padding-right : 30px;
+}

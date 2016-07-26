@@ -1,20 +1,18 @@
 (function(){
 	
-	var app = angular.module("App", []);
-		
-	app.controller("controller", ["$scope",function($scope){
-		$scope.username = "";
-		$scope.password = "";
-		$scope.functionLog = function(){
-		  console.log($scope.username, $scope.password);
-		  if($scope.username == "Thibault" && $scope.password == "Dasson_95"){
-			redirect();
-		  } else {
-			alert("Connexion échouée");
-		  }
-		}
-	}]);
+	var app = angular.module("app", ['ngComponentRouter']);
 	
+	// Menu routing
+	app.config(function($locationProvider) {
+		$locationProvider.html5Mode(true);
+	})	
+	app.value('$routerRootComponent', 'app')
+	app.component('app', {
+		template: 'It worked'
+	});		
+	// fin
+			
+	/*
 	app.controller("menuController", ["$scope", function($scope){
 		$scope.medecins = function(){
 			loadPartial("medecins");
@@ -35,10 +33,7 @@
 			console.log("test");
 		}
 	}]);
-	
-	function redirect(){
-		window.location = "html/home.html";
-	}
+		
 	
 	function loadPartial(page) {
         switch (page) {
@@ -85,5 +80,5 @@
                 break;
             
         }
-    }
+    }*/
 })();
