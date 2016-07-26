@@ -17,26 +17,27 @@
 	
 	app.controller("menuController", ["$scope", function($scope){
 		$scope.medecins = function(){
-			// console.log("Ici les médecins");
 			loadPartial("medecins");
 		}
 		$scope.hopitaux = function(){
-			//console.log("Ici les hôpitaux");
 			loadPartial("hopitaux");
 		}
 		$scope.contrats = function(){
-			//console.log("Ici les contrats");
 			loadPartial("contrats");
 		}
 		$scope.planning = function(){
-			//console.log("Ici le planning");
 			loadPartial("planning");
 		}
 	}]);
 	
+	app.controller("partialController", ["$scope", function($scope){
+		$scope.test = function(){
+			console.log("test");
+		}
+	}]);
+	
 	function redirect(){
-		//console.log("Vous allez être redirigé");
-		window.location = "home.html";
+		window.location = "html/home.html";
 	}
 	
 	function loadPartial(page) {
