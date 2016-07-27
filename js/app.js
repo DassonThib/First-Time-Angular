@@ -1,14 +1,26 @@
 (function(){
 	
-	var app = angular.module("app", ['ngComponentRouter']);
-	
+	angular.module("app", ['ngComponentRouter'])	
 	// Menu routing
-	app.config(function($locationProvider) {
+	.config(function($locationProvider) {
 		$locationProvider.html5Mode(true);
 	})	
-	app.value('$routerRootComponent', 'app')
-	app.component('app', {
-		template: 'It worked'
+	.value('$routerRootComponent', 'app')
+	.component('app', {
+		template: 
+			"<nav>\n" +
+			"  <a href='medecins.html'>Médecins</a>\n" +
+			"  <a href='hopitaux.html'>Hôpitaux</a>\n" +
+			"  <a href='contrats.html'>Contrats</a>\n" +
+			"  <a href='planning.html'>Planning</a>\n" +
+			"</nav>\n" +
+			'<ng-outlet></ng-outlet>\n',
+		$routeConfig:[
+		{path:'medecins', name:'Médecins', component:'medecins', useAsDefault:true},
+		{path:'hopitaux', name:'Hôpitaux', component:'hopitaux'},
+		{path:'contrats', name:'Contrats', component:'contrats'},
+		{path:'planning', name:'Planning', component:'planning'}
+		]
 	});		
 	// fin
 			
